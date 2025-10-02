@@ -40,7 +40,7 @@ jobs:
           # Report HTML della coverage filtrata
           genhtml coverage.filtered.info --output-directory coverage_html
 
-      - name: Debug: list produced files
+      - name: Debug list produced files
         run: |
           ls -lah basics/tests
           ls -lah basics/tests/build/artifacts/gcov || true
