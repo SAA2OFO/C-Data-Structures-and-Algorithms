@@ -28,4 +28,3 @@ jobs:
           commit_message: "style: apply clang-format"
           commit_user_name: github-actions
           commit_user_email: actions@users.noreply.github.com
-          push_options: "--force-with-lease"

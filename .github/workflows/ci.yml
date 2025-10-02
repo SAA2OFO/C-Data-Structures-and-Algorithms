@@ -35,19 +35,14 @@ jobs:
   ceedling-tests:
     name: Ceedling • Ubuntu • coverage
     runs-on: ubuntu-24.04
-    defaults: { run: { working-directory: tests } }
+    defaults: { run: { working-directory: basics/tests } }
     steps:
       - uses: actions/checkout@v4
-      - name: Install deps
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y ruby ruby-dev gcc make gcov lcov
-          sudo gem install ceedling
       - name: Run unit tests
-        run: ceedling test:all
+        run: ../../ceedling/vendor/ceedling test:all
       - name: Coverage (gcov/gcovr or lcov)
         run: |
-          ceedling gcov:all
+          ../../ceedling/vendor/ceedling gcov:all
           lcov --directory build --capture --output-file coverage.info || true
           genhtml coverage.info --output-directory coverage_html || true
       - name: Upload coverage & reports
