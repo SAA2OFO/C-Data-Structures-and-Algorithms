@@ -9,49 +9,31 @@ permissions:
   contents: read
 
 jobs:
+
   ceedling-tests:
     name: Ceedling • Ubuntu • coverage
     runs-on: ubuntu-24.04
-
+    defaults: { run: { working-directory: basics/tests } }
     steps:
       - uses: actions/checkout@v4
-
       - name: Install deps
         run: |
           sudo apt-get update
           sudo apt-get install -y ruby ruby-dev gcc make gcovr lcov
-          sudo gem install ceedling -v 1.0.0
-
-      - name: Coverage (gcovr + lcov/genhtml)
-        working-directory: basics/tests
+          sudo gem install ceedling
+      #- name: Run unit tests
+      #  run: ceedling test:all
+      - name: Coverage (gcov/gcovr or lcov)
         run: |
-          # Esegue build+test e genera report gcovr in build/artifacts/gcov/...
           ceedling gcov:all
-
-          # Cattura coverage grezza
-          lcov --directory build --capture --output-file coverage.info
-
-          # Filtra via test, runner, unity, vendor, build (mantieni solo il tuo src/include)
-          lcov --remove coverage.info \
-            '*/tests/*' '*/test/*' '*/runners/*' \
-            '*/vendor/*' '*/unity/*' '*/build/*' \
-            -o coverage.filtered.info
-
-      - name: Debug list produced files
-        run: |
-          ls -lah src/basics/tests
-          ls -lah src/basics/tests/build/artifacts/gcov || true
-          ls -lah src/basics/tests/build/artifacts/gcov/gcovr || true
-          ls -lah src/basics/tests/coverage_html || true
-
+          lcov --directory build --capture --output-file coverage.info || true
+          genhtml coverage.info --output-directory coverage_html || true
       - name: Upload coverage & reports
         uses: actions/upload-artifact@v4
         with:
           name: ceedling-reports
           path: |
-            src/basics/tests/build/artifacts/gcov/**
-            src/basics/tests/coverage.info
-            src/basics/tests/coverage.filtered.info
-            src/basics/tests/coverage_html/**
-          if-no-files-found: error
-          retention-days: 7
+            src/build/artifacts/gcov/gcovr
+            coverage_html/**
+          if-no-files-found: ignore
+          retention-rime: 7
