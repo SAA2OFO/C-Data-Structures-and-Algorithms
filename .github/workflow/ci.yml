@@ -1,0 +1,78 @@
+name: CI
+on: [push, pull_request]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  cmake-build:
+    name: CMake • ${{ matrix.os }} • ${{ matrix.cc }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, macos-14, windows-2022]
+        cc: [gcc, clang]
+        exclude:
+          - os: windows-2022
+            cc: gcc
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select compiler (non-Windows)
+        if: runner.os != 'Windows'
+        run: echo "CC=${{ matrix.cc }}" >> $GITHUB_ENV
+      - name: Configure
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+      - name: Build
+        run: cmake --build build --config Release -- -j 2
+      - name: CTest (if any)
+        run: ctest --test-dir build --output-on-failure || true
+
+  ceedling-tests:
+    name: Ceedling • Ubuntu • coverage
+    runs-on: ubuntu-24.04
+    defaults: { run: { working-directory: tests } }
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ruby ruby-dev gcc make gcov lcov
+          sudo gem install ceedling
+      - name: Run unit tests
+        run: ceedling test:all
+      - name: Coverage (gcov/gcovr or lcov)
+        run: |
+          ceedling gcov:all
+          lcov --directory build --capture --output-file coverage.info || true
+          genhtml coverage.info --output-directory coverage_html || true
+      - name: Upload coverage & reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: ceedling-reports
+          path: |
+            build/artifacts/test/**
+            coverage_html/**
+          if-no-files-found: ignore
+
+  static-analysis:
+    name: Static Analysis • Ubuntu (cppcheck + clang-tidy)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cppcheck clang-tidy
+      - name: cppcheck (errors as failures)
+        run: |
+          cppcheck --enable=all --inline-suppr --error-exitcode=1 \
+            --suppress=missingIncludeSystem -I include src
+      - name: clang-tidy
+        run: |
+          test -d build || cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+          clang-tidy $(git ls-files 'src/*.c') -- -Iinclude -std=c11

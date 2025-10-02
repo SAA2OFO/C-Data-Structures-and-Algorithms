@@ -1,0 +1,31 @@
+name: Auto Format
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  clang-format-apply:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - name: Install clang-format
+        run: sudo apt-get update && sudo apt-get install -y clang-format
+      - name: Apply clang-format
+        run: |
+          FILES=$(git ls-files '*.c' '*.h')
+          if [ -n "$FILES" ]; then
+            clang-format -i $FILES
+          fi
+      - name: Commit & push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "style: apply clang-format"
+          commit_user_name: github-actions
+          commit_user_email: actions@users.noreply.github.com
+          push_options: "--force-with-lease"
