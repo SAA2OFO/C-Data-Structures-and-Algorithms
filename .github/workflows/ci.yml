@@ -33,6 +33,6 @@ jobs:
         with:
           name: ceedling-reports
           path: |
-            build/artifacts/test/**
+            build/artifacts/gcov/**
             coverage_html/**
           if-no-files-found: ignore
