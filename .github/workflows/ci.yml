@@ -35,7 +35,7 @@ jobs:
   ceedling-tests:
     name: Ceedling • Ubuntu • coverage
     runs-on: ubuntu-24.04
-    defaults: { run: { working-directory: tests } }
+    defaults: { run: { working-directory: basics/tests } }
     steps:
       - uses: actions/checkout@v4
       - name: Install deps
