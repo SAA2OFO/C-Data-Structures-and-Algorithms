@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<testsuites tests="3" failures="0" time="0.696">
+  <testsuite name="test_sum" tests="3" failures="0" skipped="0" errors="0" time="0.696">
+    <testcase name="test_sum_of_two_positive_numbers" time="0.000"/>
+    <testcase name="test_sum_with_negative_number" time="0.000"/>
+    <testcase name="test_sum_with_zero" time="0.000"/>
+  </testsuite>
+</testsuites>
