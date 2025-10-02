@@ -39,10 +39,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run unit tests
-        run: ../../ceedling/vendor/ceedling test:all
+        run: ../../ceedling/vendor/ceedling/bin/ceedling test:all
       - name: Coverage (gcov/gcovr or lcov)
         run: |
-          ../../ceedling/vendor/ceedling gcov:all
+          ../../ceedling/vendor/ceedling/bin/ceedling gcov:all
           lcov --directory build --capture --output-file coverage.info || true
           genhtml coverage.info --output-directory coverage_html || true
       - name: Upload coverage & reports
