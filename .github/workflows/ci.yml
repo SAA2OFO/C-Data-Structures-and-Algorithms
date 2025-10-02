@@ -38,4 +38,4 @@ jobs:
             basics/tests/coverage.info
             basics/tests/coverage_html/**
           if-no-files-found: ignore
-          retention-days: 7
+          retention-days: 6
