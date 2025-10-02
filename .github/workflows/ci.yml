@@ -28,11 +28,20 @@ jobs:
           ceedling gcov:all
           lcov --directory build --capture --output-file coverage.info || true
           genhtml coverage.info --output-directory coverage_html || true
+
+      - name: Debug: list outputs
+        run: |
+          ls -lah
+          ls -lah build/artifacts/gcov || true
+          ls -lah build/artifacts/gcov/gcovr || true
+        working-directory: basics/tests
+
       - name: Upload coverage & reports
         uses: actions/upload-artifact@v4
         with:
           name: ceedling-reports
           path: |
-            build/artifacts/gcov/gcovr
-            coverage_html/**
-          if-no-files-found: ignore
+            basics/tests/build/artifacts/gcov/**
+            basics/tests/coverage.info
+            basics/tests/coverage_html/**
+          if-no-files-found: error
