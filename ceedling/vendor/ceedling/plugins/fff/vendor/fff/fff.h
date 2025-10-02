@@ -5,31 +5,31 @@
     SPDX-License-Identifier: MIT
 ========================================================================= */
 
-/*                                                                             \
-LICENSE                                                                        \
-                                                                               \
-The MIT License (MIT)                                                          \
-                                                                               \
-Copyright (c) 2010 Michael Long                                                \
-                                                                               \
-Permission is hereby granted, free of charge, to any person obtaining a copy   \
-of this software and associated documentation files (the "Software"), to deal  \
-in the Software without restriction, including without limitation the rights   \
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell      \
-copies of the Software, and to permit persons to whom the Software is          \
-furnished to do so, subject to the following conditions:                       \
-                                                                               \
-The above copyright notice and this permission notice shall be included in all \
-copies or substantial portions of the Software.                                \
-                                                                               \
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR     \
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,       \
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE    \
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER         \
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,  \
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  \
-SOFTWARE.                                                                      \
-*/                                                                             \
+/*                                                                               \
+LICENSE                                                                          \
+                                                                               \ \
+The MIT License (MIT)                                                            \
+                                                                               \ \
+Copyright (c) 2010 Michael Long                                                  \
+                                                                               \ \
+Permission is hereby granted, free of charge, to any person obtaining a copy     \
+of this software and associated documentation files (the "Software"), to deal    \
+in the Software without restriction, including without limitation the rights     \
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell        \
+copies of the Software, and to permit persons to whom the Software is            \
+furnished to do so, subject to the following conditions:                         \
+                                                                               \ \
+The above copyright notice and this permission notice shall be included in all   \
+copies or substantial portions of the Software.                                  \
+                                                                               \ \
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR       \
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,         \
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE      \
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER           \
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,    \
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE    \
+SOFTWARE.                                                                        \
+*/                                                                               \
 #ifndef FAKE_FUNCTIONS
 #define FAKE_FUNCTIONS
 
@@ -1838,7 +1838,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG2_TYPE, 2, FUNCNAME)                                        \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2);                          \
   } FUNCNAME##_Fake;                                                           \
   extern FUNCNAME##_Fake FUNCNAME##_fake;                                      \
@@ -1886,7 +1886,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG3_TYPE, 3, FUNCNAME)                                        \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3);          \
   } FUNCNAME##_Fake;                                                           \
   extern FUNCNAME##_Fake FUNCNAME##_fake;                                      \
@@ -1938,7 +1938,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG4_TYPE, 4, FUNCNAME)                                        \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4);                                                          \
   } FUNCNAME##_Fake;                                                           \
@@ -1994,7 +1994,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG5_TYPE, 5, FUNCNAME)                                        \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5);                                          \
   } FUNCNAME##_Fake;                                                           \
@@ -2054,7 +2054,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG6_TYPE, 6, FUNCNAME)                                        \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6);                          \
   } FUNCNAME##_Fake;                                                           \
@@ -2123,7 +2123,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG7_TYPE, 7, FUNCNAME)                                        \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7);          \
   } FUNCNAME##_Fake;                                                           \
@@ -2195,7 +2195,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG8_TYPE, 8, FUNCNAME)                                        \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8);                                                          \
@@ -2271,7 +2271,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG9_TYPE, 9, FUNCNAME)                                        \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9);                                          \
@@ -2352,7 +2352,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG10_TYPE, 10, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10);                        \
@@ -2440,7 +2440,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG11_TYPE, 11, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10, ARG11_TYPE arg11);      \
@@ -2532,7 +2532,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG12_TYPE, 12, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10, ARG11_TYPE arg11,       \
@@ -2629,7 +2629,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG13_TYPE, 13, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10, ARG11_TYPE arg11,       \
@@ -2729,7 +2729,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG14_TYPE, 14, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10, ARG11_TYPE arg11,       \
@@ -2832,7 +2832,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG15_TYPE, 15, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10, ARG11_TYPE arg11,       \
@@ -2940,7 +2940,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG16_TYPE, 16, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10, ARG11_TYPE arg11,       \
@@ -3056,7 +3056,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG17_TYPE, 17, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10, ARG11_TYPE arg11,       \
@@ -3175,7 +3175,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG18_TYPE, 18, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10, ARG11_TYPE arg11,       \
@@ -3297,7 +3297,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG19_TYPE, 19, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10, ARG11_TYPE arg11,       \
@@ -4944,7 +4944,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG2_TYPE, 2, FUNCNAME)                                        \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2);                          \
   } FUNCNAME##_Fake;                                                           \
   extern FUNCNAME##_Fake FUNCNAME##_fake;                                      \
@@ -4992,7 +4992,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG3_TYPE, 3, FUNCNAME)                                        \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3);          \
   } FUNCNAME##_Fake;                                                           \
   extern FUNCNAME##_Fake FUNCNAME##_fake;                                      \
@@ -5045,7 +5045,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG4_TYPE, 4, FUNCNAME)                                        \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4);                                                          \
   } FUNCNAME##_Fake;                                                           \
@@ -5103,7 +5103,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG5_TYPE, 5, FUNCNAME)                                        \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5);                                          \
   } FUNCNAME##_Fake;                                                           \
@@ -5167,7 +5167,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG6_TYPE, 6, FUNCNAME)                                        \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6);                          \
   } FUNCNAME##_Fake;                                                           \
@@ -5236,7 +5236,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG7_TYPE, 7, FUNCNAME)                                        \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7);          \
   } FUNCNAME##_Fake;                                                           \
@@ -5308,7 +5308,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG8_TYPE, 8, FUNCNAME)                                        \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8);                                                          \
@@ -5384,7 +5384,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG9_TYPE, 9, FUNCNAME)                                        \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9);                                          \
@@ -5465,7 +5465,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG10_TYPE, 10, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10);                        \
@@ -5553,7 +5553,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG11_TYPE, 11, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10, ARG11_TYPE arg11);      \
@@ -5646,7 +5646,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG12_TYPE, 12, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10, ARG11_TYPE arg11,       \
@@ -5743,7 +5743,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG13_TYPE, 13, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10, ARG11_TYPE arg11,       \
@@ -5843,7 +5843,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG14_TYPE, 14, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10, ARG11_TYPE arg11,       \
@@ -5947,7 +5947,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG15_TYPE, 15, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10, ARG11_TYPE arg11,       \
@@ -6059,7 +6059,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG16_TYPE, 16, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10, ARG11_TYPE arg11,       \
@@ -6175,7 +6175,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG17_TYPE, 17, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10, ARG11_TYPE arg11,       \
@@ -6294,7 +6294,7 @@ FFF_END_EXTERN_C
     DECLARE_ARG(ARG18_TYPE, 18, FUNCNAME)                                      \
     DECLARE_ALL_FUNC_COMMON                                                    \
     DECLARE_VALUE_FUNCTION_VARIABLES(RETURN_TYPE)                              \
-    RETURN_TYPE (*custom_fake)                                                 \
+    RETURN_TYPE(*custom_fake)                                                  \
     (ARG0_TYPE arg0, ARG1_TYPE arg1, ARG2_TYPE arg2, ARG3_TYPE arg3,           \
      ARG4_TYPE arg4, ARG5_TYPE arg5, ARG6_TYPE arg6, ARG7_TYPE arg7,           \
      ARG8_TYPE arg8, ARG9_TYPE arg9, ARG10_TYPE arg10, ARG11_TYPE arg11,       \
