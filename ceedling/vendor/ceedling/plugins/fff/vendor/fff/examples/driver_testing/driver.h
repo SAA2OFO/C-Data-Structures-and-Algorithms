@@ -5,10 +5,6 @@
     SPDX-License-Identifier: MIT
 ========================================================================= */
 
-
-
-
-
 #ifndef DRIVER
 #define DRIVER
 

@@ -14,9 +14,7 @@ void foo_turn_on(void) {
   zzz_sleep(1, "sleepy");
 }
 
-void foo_print_message(const char * message) {
-  bar_print_message(message);
-}
+void foo_print_message(const char *message) { bar_print_message(message); }
 
 void foo_print_special_message(void) {
   bar_print_message_formatted("The numbers are %d, %d and %d", 1, 2, 3);

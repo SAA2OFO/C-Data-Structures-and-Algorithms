@@ -5,9 +5,6 @@
     SPDX-License-Identifier: MIT
 ========================================================================= */
 
-
-
-
 /*
  * DISPLAY.h
  *
@@ -24,7 +21,6 @@ typedef void (*irq_func_t)(void);
 #define IRQ_GPIO_1 0x71
 #define IRQ_GPIO_2 0x72
 #define IRQ_GPIO_3 0x73
-
 
 void SYSTEM_register_irq(irq_func_t, unsigned int irq);
 

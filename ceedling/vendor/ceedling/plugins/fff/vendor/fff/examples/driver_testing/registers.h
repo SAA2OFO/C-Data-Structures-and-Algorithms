@@ -5,14 +5,11 @@
     SPDX-License-Identifier: MIT
 ========================================================================= */
 
-
-
-
 #ifndef REGISTERS_H_
 #define REGISTERS_H_
 
 #define DRIVER_OUTPUT_REGISTER 0xFFAAu
-#define DRIVER_INPUT_REGISTER  0XFFABu
+#define DRIVER_INPUT_REGISTER 0XFFABu
 #define DRIVER_PERIPHERAL_ENABLE_REG 0xFFACu
 #define DRIVER_PERIPHERAL_INITIALIZE_REG 0xFFACu
 

@@ -5,9 +5,6 @@
     SPDX-License-Identifier: MIT
 ========================================================================= */
 
-
-
-
 /*
  * DISPLAY.h
  *
@@ -22,6 +19,6 @@ void DISPLAY_init();
 void DISPLAY_clear();
 unsigned int DISPLAY_get_line_capacity();
 unsigned int DISPLAY_get_line_insert_index();
-void DISPLAY_output(char * message);
+void DISPLAY_output(char *message);
 
 #endif /* DISPLAY_H_ */

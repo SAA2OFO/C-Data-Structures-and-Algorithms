@@ -5,10 +5,7 @@
     SPDX-License-Identifier: MIT
 ========================================================================= */
 
-#include <stdio.h>
 #include "display.h"
+#include <stdio.h>
 
-void display_turnOffStatusLed(void)
-{
-    printf("Display: Status LED off");
-}
+void display_turnOffStatusLed(void) { printf("Display: Status LED off"); }
